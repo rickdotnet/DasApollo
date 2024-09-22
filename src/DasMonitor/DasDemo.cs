@@ -163,6 +163,7 @@ public class DasDemo
             });
 
         await Task.Delay(1000);
+        await publisher.ClearSignal(new ClearSignalCommand{ ProductId = "DK5QPID", ZoneId = "KEY_1" });
         Console.WriteLine("Press any key to exit");
         Console.ReadKey();
     }

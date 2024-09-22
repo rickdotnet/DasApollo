@@ -4,7 +4,7 @@ namespace DasMonitor.Abstractions;
 
 public static class DasMonitorConstants
 {
-    public const string BaseSignalUrl = "http://localhost:27301/api/1.0/signals";
+    public const string BaseSignalUrl = "http://localhost:27301/api/1.0/signals/";
     public static readonly EndpointConfig EndpointConfig = new()
     {
         EndpointName = "daskeyboard Signal Monitor",

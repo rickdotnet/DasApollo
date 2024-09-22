@@ -29,7 +29,7 @@ public class DasSignalClient
             Message = command.Message
         };
 
-        var response = await httpClient.PostAsJsonAsync(DasMonitorConstants.BaseSignalUrl, payload, cancellationToken);
+        var response = await httpClient.PostAsJsonAsync("", payload, cancellationToken);
         var result =
             new DasResult(
                 response.IsSuccessStatusCode,
@@ -41,7 +41,7 @@ public class DasSignalClient
 
     public async Task<DasResult> ClearSignalAsync(ClearSignalCommand command, CancellationToken cancellationToken)
     {
-        var url = $"/pid/{command.ProductId}/zoneId/{command.ZoneId}";
+        var url = $"pid/{command.ProductId}/zoneId/{command.ZoneId}";
 
         var response = await httpClient.DeleteAsync(url, cancellationToken);
         var result =
