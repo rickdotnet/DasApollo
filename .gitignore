@@ -394,8 +394,10 @@ FodyWeavers.xsd
 *.msm
 *.msp
 
-# Rider
-.idea
-
 # JetBrains Rider
 *.sln.iml
+.idea
+
+# DasMonitor
+monitorConfig.json
+
